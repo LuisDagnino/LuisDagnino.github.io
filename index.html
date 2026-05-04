@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luis Dagnino</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background:#0a0a0a;
+  color:#fff;
+  line-height:1.6;
+}
+
+.container {
+  max-width:1000px;
+  margin:auto;
+  padding:120px 20px;
+}
+
+/* HERO */
+.hero {
+  font-size:3.5rem;
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.highlight {
+  color:#4f8cff;
+}
+
+.subtitle {
+  font-size:1.2rem;
+  color:#aaa;
+  margin-bottom:80px;
+  max-width:600px;
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom:100px;
+}
+
+.section h2 {
+  font-size:1.3rem;
+  color:#4f8cff;
+  margin-bottom:20px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.item {
+  margin-bottom:30px;
+}
+
+.item-title {
+  font-size:1.2rem;
+  font-weight:600;
+}
+
+.item-sub {
+  font-size:0.9rem;
+  color:#888;
+  margin-bottom:5px;
+}
+
+/* CARDS */
+.card {
+  background:#111;
+  padding:25px;
+  border-radius:10px;
+  margin-bottom:20px;
+  transition:0.3s;
+}
+
+.card:hover {
+  background:#151515;
+  transform:translateY(-3px);
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+/* ANIMATION */
+.fade {
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.6s ease;
+}
+
+.fade.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+
+@media(max-width:768px){
+  .hero { font-size:2.2rem; }
+  .grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero fade">
+I build <span class="highlight">secure</span> and 
+<span class="highlight">scalable</span> network systems.
+</div>
+
+<div class="subtitle fade">
+Networking & Cybersecurity Specialist with 10+ years of experience across Europe and Latin America.
+Focused on infrastructure, security, and real-world execution.
+</div>
+
+<!-- IMPACT -->
+<div class="section fade">
+<h2>Impact</h2>
+
+<div class="grid">
+
+<div class="card">
+<strong>50+ Clients</strong>
+<p>Managed ISP infrastructure and enterprise networks.</p>
+</div>
+
+<div class="card">
+<strong>Enterprise Support</strong>
+<p>Handled critical Microsoft EMEA networking incidents.</p>
+</div>
+
+<div class="card">
+<strong>10+ Years</strong>
+<p>Experience in networking, systems, and operations.</p>
+</div>
+
+<div class="card">
+<strong>Full Stack Infra</strong>
+<p>WAN, LAN, VLAN, VPN, DNS, QoS, Cloud.</p>
+</div>
+
+</div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section fade">
+<h2>Experience</h2>
+
+<div class="item">
+<div class="item-title">Microsoft — Support Engineer</div>
+<div class="item-sub">Spain · 2022</div>
+<p>
+Resolved high-severity enterprise issues involving VPNs, firewalls,
+routing and hybrid cloud environments. Performed root cause analysis 
+for mission-critical systems.
+</p>
+</div>
+
+<div class="item">
+<div class="item-title">Networking Internet — Co-Founder</div>
+<div class="item-sub">Mexico · 2014–2021</div>
+<p>
+Built and scaled an ISP with 50+ clients. Designed full network architecture 
+and managed operations, finance and legal structure.
+</p>
+</div>
+
+</div>
+
+<!-- SKILLS -->
+<div class="section fade">
+<h2>Capabilities</h2>
+
+<div class="grid">
+
+<div class="card">
+<strong>Networking</strong>
+<p>Routing, Switching, VLAN, DNS, QoS</p>
+</div>
+
+<div class="card">
+<strong>Security</strong>
+<p>Firewalls, VPNs, Traffic Control</p>
+</div>
+
+<div class="card">
+<strong>Systems</strong>
+<p>Windows Server, Linux, VMware</p>
+</div>
+
+<div class="card">
+<strong>Cloud</strong>
+<p>Azure Fundamentals, Hybrid Infra</p>
+</div>
+
+</div>
+</div>
+
+<!-- EDUCATION -->
+<div class="section fade">
+<h2>Education</h2>
+<p>
+B.Sc. Computer Science (2023–2026)<br>
+M.Sc. Tax Law<br>
+LL.B. Law
+</p>
+</div>
+
+<!-- CONTACT -->
+<div class="section fade">
+<h2>Contact</h2>
+<p>
+info@networkinginternet.com<br>
+EU Citizen — Available for international roles
+</p>
+</div>
+
+</div>
+
+<script>
+const elements = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
